@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1568270877 source:/home/pragramist/Documents/C++/laboratorna_ilona/laboratorna/main.cpp
+	<iostream>
+	"random.h"
+	<vector>
+	<cmath>
+	<string>
+
+1568270837 /home/pragramist/Documents/C++/laboratorna_ilona/laboratorna/random.h
+	<vector>
+
+1568270882 source:/home/pragramist/Documents/C++/laboratorna_ilona/laboratorna/random.cpp
+	<iostream>
+	"random.h"
+
