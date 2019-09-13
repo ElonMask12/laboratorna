@@ -1,17 +1,20 @@
 #include <iostream>
-#include "random.h"
+#include "Random.h"
 
 #include <vector>
 #include <cmath>
 #include <string>
 
+//cons int m = 12000;
 using namespace std;
 
-void histograma(vector<double> a, double m) {
+void histograma(vector<double> a,const int m) {
 	vector <double> u(10, 0);
 	double r = a.size();
+
 	for (int i = 0; i < a.size(); ++i) {
 		double t = a[i] / m;
+
 		if ((t >= 0.0) && (t <= 0.1)) {
 			u[0] += 1.0 / r;
 		}
@@ -42,9 +45,10 @@ void histograma(vector<double> a, double m) {
 		else if ((t > 0.9) && (t <= 1.0)) {
 			u[9] += 1.0 / r;
 		}
+
 	}
-	for (int i = 0; i < 10; ++i) {
-		cout << "  [0;0.1]:  " << u[i] << endl;
+	for (double i = 0; i < 10; ++i) {
+		cout << "["<<i/10<<";"<<(i+1)/10<<"]"<<":  "<< u[i] << endl;
 	}
 }
 
@@ -56,53 +60,31 @@ int main() {
 	{
 	case 1:
 	{
-		cout << "Please,enter m" << endl;
-		int m, c, x0, d, a,xn1,xn2;
-		cin >> m;
-		cout << "Please,enter c" << endl;
-		cin >> c;
-		cout << "Please,enter a" << endl;
-		cin >> a;
+		int x0;
 		cout << "Please,enter x0" << endl;
 		cin >> x0;
-		cout << "Please,enter d" << endl;
-		cin >> d;
-		cout << "Please,enter xn1" << endl;
-		cin >> xn1;
-		cout << "Please,enter xn2" << endl;
-		cin >> xn2;
+		int m = 12000;
 
 		Random random1;
-		random1.get(m, a, c, d, x0,xn1,xn2);
+		random1.get(x0,m);
 		random1.random1();
 		random1.print();
 
-		histograma(random1.number, m);
+     	histograma(random1.number, m);
 
 	}
 	break;
 	case 2:
-		//int  d;
 	{
-		cout << "Please,enter m" << endl;
-		int m, c, x0, d, a, xn1, xn2;
-		cin >> m;
-		cout << "Please,enter c" << endl;
-		cin >> c;
-		cout << "Please,enter a" << endl;
-		cin >> a;
+		int  x0;
+
 		cout << "Please,enter x0" << endl;
 		cin >> x0;
-		cout << "Please,enter d" << endl;
-		cin >> d;
-		cout << "Please,enter xn1" << endl;
-		cin >> xn1;
-		cout << "Please,enter xn2" << endl;
-		cin >> xn2;
+		int m = 12000;
 
 		Random random2;
-		random2.get(m, a, c, d, x0, xn1, xn2);
-		random2.random1();
+		random2.get(x0,m);
+		random2.random2();
 		random2.print();
 		histograma(random2.number, m);
 
@@ -110,32 +92,123 @@ int main() {
 	break;
 	case 3:
 	{
-		cout << "Please,enter m" << endl;
-		int m, c, x0, d, a, xn1, xn2;
-		cin >> m;
-		cout << "Please,enter c" << endl;
-		cin >> c;
-		cout << "Please,enter a" << endl;
-		cin >> a;
-		cout << "Please,enter x0" << endl;
+		int x0;
+
 		cin >> x0;
 		cout << "Please,enter d" << endl;
-		cin >> d;
-		cout << "Please,enter xn1" << endl;
-		cin >> xn1;
-		cout << "Please,enter xn2" << endl;
-		cin >> xn2;
-
+		int m = 12000;
 		Random random3;
-		random3.get(m, a, c, d, x0, xn1, xn2);
-		random3.random1();
+		random3.get(x0,m);
+		random3.random3();
 		random3.print();
 
 		histograma(random3.number, m);
 
 	}
 	break;
-    }
+	case 4:
+	{
+		int m = 12000;
+		Random random4;
+		random4.random4();
+		random4.print();
+
+		histograma(random4.number, m);
+	}
+	break;
+	case 5:
+	{
+		int m = 12000;
+		Random random5;
+		random5.random5();
+		random5.print();
+
+		histograma(random5.number, m);
+	}
+	break;
+	case 6:
+	{
+		int x0;
+		cout << "Please,enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+
+		Random random6;
+		random6.get(x0, m);
+		random6.random6();
+		random6.print();
+
+		histograma(random6.number, m);
+	}
+	break;
+	case 7:
+	{
+		int x0;
+		cout << "Please,enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+
+		Random random7;
+		random7.get(x0, m);
+		random7.random7();
+		random7.print();
+
+		histograma(random7.number, m);
+	}
+	break;
+	case 8:
+	{
+		int x0;
+		cout << "Please,enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+
+		Random random8;
+		random8.get(x0, m);
+		random8.random8();
+		random8.print();
+
+		histograma(random8.number, m);
+	}
+	break;
+	case 9:
+	{
+		int x0;
+		cout << "Please,enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+
+		Random random9;
+		random9.get(x0, m);
+		random9.random9();
+		random9.print();
+
+		histograma(random9.number, m);
+	}
+	break;
+	case 10:
+	{
+		int x0;
+		cout << "Please,enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+
+		Random random10;
+		random10.get(x0, m);
+		random10.random10();
+		random10.print();
+
+		histograma(random10.number, m);
+	}
+	break;
+
+	}
+
 
 	return 0;
 }
